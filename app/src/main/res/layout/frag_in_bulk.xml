@@ -1,0 +1,31 @@
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditText android:layout_width="match_parent" android:layout_height="match_parent"
+              android:padding="10dp" android:textSize="16sp" android:textColor="#ffffff"
+              android:scrollbars="vertical" android:textColorHint="#948E8E"
+              android:hint="Enter numbers separated by  ,  or Blank Space"
+              android:gravity="start" android:inputType="textMultiLine"
+              android:layout_above="@id/fabCalcInBulk"
+              android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+              android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarFadeDuration="0"
+              android:id="@+id/txtInBulk"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabCalcInBulk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#3F51B5"
+            android:src="@drawable/ic_calc"
+            android:layout_margin="16dp" />
+
+</RelativeLayout>
