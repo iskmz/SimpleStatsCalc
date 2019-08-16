@@ -4,28 +4,37 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Data Set ..." android:textSize="16sp" android:textColor="#ffffff"
+              android:textStyle="italic" android:layout_alignParentStart="true"
+              android:layout_alignParentTop="true" android:layout_margin="10dp"
+              android:id="@+id/txtTitleDataSet"/>
+
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Original List" android:layout_toStartOf="@id/btnCopy" android:layout_margin="10dp"
-            android:layout_alignParentTop="true"
+            android:text="Original" android:layout_alignStart="@id/txtTitleDataSet"
+            android:layout_margin="10dp"
+            android:layout_below="@id/txtTitleDataSet"
             android:textSize="16sp" android:textStyle="bold" android:padding="10dp"
             android:id="@+id/btnShowOriginalList"/>
 
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Ordered List" android:layout_toEndOf="@id/btnCopy" android:layout_margin="10dp"
-            android:layout_alignParentTop="true"
+            android:text="Ordered" android:layout_margin="10dp"
+            android:layout_below="@id/txtTitleDataSet" android:layout_toEndOf="@id/btnShowOriginalList"
             android:textSize="16sp" android:textStyle="bold" android:padding="10dp"
             android:id="@+id/btnShowOrderedList"/>
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="Analysis ..." android:textSize="16sp" android:textColor="#ffffff"
-              android:textStyle="italic" android:layout_alignStart="@id/btnShowOriginalList"
+              android:textStyle="italic" android:layout_alignStart="@id/txtTitleDataSet"
               android:layout_below="@id/btnShowOriginalList" android:layout_margin="10dp"
               android:id="@+id/txtTitleAnalysis"/>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
     android:layout_below="@id/txtTitleAnalysis" android:layout_margin="10dp"
     android:layout_above="@id/btnCopy" android:scrollbarFadeDuration="0"
-    android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbars="vertical">
+    android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbars="vertical"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbarThumbVertical="@color/scrollColor">
 
         <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:id="@+id/layDataAnalysis">
@@ -85,8 +94,6 @@
                       android:text="Standard Deviation: " android:textColor="#6161E4" android:textSize="16sp"
                       android:layout_below="@id/txtTitleVariance" android:layout_alignStart="@id/txtTitleVariance"
                       android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleSTD"/>
-
-
 
 
         </RelativeLayout>

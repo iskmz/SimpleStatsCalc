@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.frag_main.*
-import com.iskandar.simplestatscalc.MainActivity.Companion.TAG_FRAG_IN_BULK
-import com.iskandar.simplestatscalc.MainActivity.Companion.TAG_FRAG_IN_ONE
+import com.iskandar.simplestatscalc.MainActivity.Companion.TAG_FRAG_IN_BULK as FRAG_IN_BULK
+import com.iskandar.simplestatscalc.MainActivity.Companion.TAG_FRAG_IN_ONE as FRAG_IN_ONE
 
 class MainFrag : Fragment()
 {
@@ -24,7 +24,7 @@ class MainFrag : Fragment()
         super.onStart()
 
         val mainAct = activity!! as MainActivity
-        btnInBulk.setOnClickListener { mainAct.switchTo(TAG_FRAG_IN_BULK) }
-        btnInOne.setOnClickListener { mainAct.switchTo(TAG_FRAG_IN_ONE) }
+        btnInBulk.setOnClickListener { mainAct.switchTo(FRAG_IN_BULK) }
+        btnInOne.setOnClickListener { mainAct.switchTo(FRAG_IN_ONE) }
     }
 }

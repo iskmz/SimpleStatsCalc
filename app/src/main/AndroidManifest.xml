@@ -11,7 +11,8 @@
             android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity"
-        android:screenOrientation="portrait">
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
