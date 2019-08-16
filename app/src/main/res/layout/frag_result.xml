@@ -1,6 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#000000"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-</android.support.constraint.ConstraintLayout>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Original List" android:layout_toStartOf="@id/btnCopy" android:layout_margin="10dp"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp" android:textStyle="bold" android:padding="10dp"
+            android:id="@+id/btnShowOriginalList"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Ordered List" android:layout_toEndOf="@id/btnCopy" android:layout_margin="10dp"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp" android:textStyle="bold" android:padding="10dp"
+            android:id="@+id/btnShowOrderedList"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Analysis ..." android:textSize="16sp" android:textColor="#ffffff"
+              android:textStyle="italic" android:layout_alignStart="@id/btnShowOriginalList"
+              android:layout_below="@id/btnShowOriginalList" android:layout_margin="10dp"
+              android:id="@+id/txtTitleAnalysis"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_below="@id/txtTitleAnalysis" android:layout_margin="10dp"
+    android:layout_above="@id/btnCopy" android:scrollbarFadeDuration="0"
+    android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbars="vertical">
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/layDataAnalysis">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Sum: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleSum"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Mean: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleSum" android:layout_alignStart="@id/txtTitleSum"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMean"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Median: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleMean" android:layout_alignStart="@id/txtTitleMean"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMedian"/>
+
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Min: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleMedian" android:layout_alignStart="@id/txtTitleMedian"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMin"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Max: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleMin" android:layout_alignStart="@id/txtTitleMin"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMax"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Range: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleMax" android:layout_alignStart="@id/txtTitleMax"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleRange"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="1st Q.: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleRange" android:layout_alignStart="@id/txtTitleRange"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleQ1"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="3rd Q.: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleQ1" android:layout_alignStart="@id/txtTitleQ1"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleQ3"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="I.Q.R.: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleQ3" android:layout_alignStart="@id/txtTitleQ3"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleIQR"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Variance: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleIQR" android:layout_alignStart="@id/txtTitleIQR"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleVariance"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Standard Deviation: " android:textColor="#6161E4" android:textSize="16sp"
+                      android:layout_below="@id/txtTitleVariance" android:layout_alignStart="@id/txtTitleVariance"
+                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleSTD"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+    <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#072CE4"
+            android:src="@drawable/ic_share"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+
+    <ImageButton
+            android:id="@+id/btnBackToInput"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_back"
+            android:tint="#ff0000"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    <ImageButton
+            android:id="@+id/btnCopy"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="#00000000"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:tint="#FC3C00"
+            android:src="@drawable/ic_copy"
+            android:layout_marginBottom="16dp"/>
+
+
+
+</RelativeLayout>
