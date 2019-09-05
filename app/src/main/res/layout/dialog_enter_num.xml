@@ -1,0 +1,31 @@
+<RelativeLayout
+        android:layout_width="300dp" android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#000000">
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true" android:layout_margin="15dp"
+              android:hint="number ..." android:textSize="18sp"
+              android:maxLines="1" android:scrollbars="horizontal" android:lines="1"
+              android:gravity="center"
+              android:inputType="text" android:textColor="#4C4CB1" android:textColorHint="#6666EE"
+              android:scrollbarAlwaysDrawHorizontalTrack="true"
+              android:id="@+id/txtNumberDialogValue">
+    <requestFocus/>
+    </EditText>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Cancel" android:textAllCaps="false" android:layout_below="@id/txtNumberDialogValue"
+            android:layout_marginTop="10dp" android:layout_alignStart="@id/txtNumberDialogValue"
+            android:id="@+id/btnNumberDialogCancel"
+            android:textColor="#FF0F00" android:layout_marginBottom="15dp"
+            android:textSize="16sp"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ADD" android:textAllCaps="false" android:layout_below="@id/txtNumberDialogValue"
+            android:layout_marginTop="10dp" android:layout_alignEnd="@id/txtNumberDialogValue"
+            android:id="@+id/btnNumberDialogAdd"
+            android:textColor="#0AB40D" android:layout_marginBottom="15dp"
+            android:textSize="16sp"/>
+
+</RelativeLayout>

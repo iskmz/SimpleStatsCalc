@@ -29,77 +29,20 @@
               android:layout_below="@id/btnShowOriginalList" android:layout_margin="10dp"
               android:id="@+id/txtTitleAnalysis"/>
 
-    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+    <ListView android:layout_width="match_parent" android:layout_height="match_parent"
     android:layout_below="@id/txtTitleAnalysis" android:layout_margin="10dp"
     android:layout_above="@id/btnCopy" android:scrollbarFadeDuration="0"
     android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbars="vertical"
     android:scrollbarStyle="outsideInset"
-    android:scrollbarThumbVertical="@color/scrollColor">
-
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:id="@+id/layDataAnalysis">
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Sum: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_alignParentStart="true" android:layout_alignParentTop="true"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleSum"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Mean: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleSum" android:layout_alignStart="@id/txtTitleSum"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMean"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Median: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleMean" android:layout_alignStart="@id/txtTitleMean"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMedian"/>
+    android:scrollbarThumbVertical="@color/scrollColor"
+    android:id="@+id/lstResults">
 
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Min: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleMedian" android:layout_alignStart="@id/txtTitleMedian"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMin"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Max: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleMin" android:layout_alignStart="@id/txtTitleMin"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleMax"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Range: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleMax" android:layout_alignStart="@id/txtTitleMax"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleRange"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="1st Q.: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleRange" android:layout_alignStart="@id/txtTitleRange"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleQ1"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="3rd Q.: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleQ1" android:layout_alignStart="@id/txtTitleQ1"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleQ3"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="I.Q.R.: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleQ3" android:layout_alignStart="@id/txtTitleQ3"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleIQR"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Variance: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleIQR" android:layout_alignStart="@id/txtTitleIQR"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleVariance"/>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="Standard Deviation: " android:textColor="#6161E4" android:textSize="16sp"
-                      android:layout_below="@id/txtTitleVariance" android:layout_alignStart="@id/txtTitleVariance"
-                      android:padding="10dp" android:textStyle="bold" android:id="@+id/txtTitleSTD"/>
 
 
-        </RelativeLayout>
+    </ListView>
 
 
-    </ScrollView>
 
 
 
