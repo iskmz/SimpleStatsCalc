@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+
+val legal_chars = listOf('-','0','1','2','3','4','5','6','7','8','9','.',',',' ') // to check when parsing text to num_list
+
+
 class InBulkFrag : Fragment()
 {
 

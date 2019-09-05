@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 
 
-val legal_chars = listOf('-','0','1','2','3','4','5','6','7','8','9','.',',',' ')
 val num_list = mutableListOf<Double>()
 
 
@@ -51,7 +50,6 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.layContainer,mainFrag)
             .addToBackStack(null)
             .commit()
-
     }
 
 

@@ -9,5 +9,7 @@
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="12345.6789" android:textColor="#EEEEF5" android:textSize="16sp"
               android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+              android:layout_toEndOf="@id/txtResultItemTitle" android:gravity="end"
+              android:layout_marginStart="20dp"
               android:padding="10dp" android:textStyle="bold" android:id="@+id/txtResultItemValue"/>
 </RelativeLayout>

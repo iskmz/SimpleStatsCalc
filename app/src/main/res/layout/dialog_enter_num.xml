@@ -1,14 +1,17 @@
 <RelativeLayout
         android:layout_width="300dp" android:layout_height="wrap_content"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="#000000">
+        android:background="@drawable/back_num_input_dialog">
 
     <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
-              android:layout_centerHorizontal="true" android:layout_margin="15dp"
+              android:layout_centerHorizontal="true" android:layout_margin="10dp"
               android:hint="number ..." android:textSize="18sp"
               android:maxLines="1" android:scrollbars="horizontal" android:lines="1"
               android:gravity="center"
-              android:inputType="text" android:textColor="#4C4CB1" android:textColorHint="#6666EE"
+              android:inputType="numberSigned|numberDecimal"
+              android:textStyle="italic"
+              android:textColor="#FFFFFF"
+              android:textColorHint="#7171DB"
               android:scrollbarAlwaysDrawHorizontalTrack="true"
               android:id="@+id/txtNumberDialogValue">
     <requestFocus/>
