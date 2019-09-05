@@ -1,11 +1,14 @@
 package com.iskandar.simplestatscalc
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.DrawableContainer
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,9 +53,47 @@ class ResFrag : Fragment()
         super.onStart()
 
         sorted_list = num_list.sorted()
+        btnShowOriginalList.setOnClickListener { showOriginalListDialog() }
+        btnShowOrderedList.setOnClickListener { showOrderedListDialog() }
         // initialization // calculation
         resList = MutableList(resTitles.size){ i-> Result(resTitles[i],calculate(i)) }
         refreshAdapter()
+    }
+
+    @SuppressLint("PrivateResource")
+    private fun showOrderedListDialog() {
+        val ordered = AlertDialog.Builder(ContextThemeWrapper(activity!!,R.style.AlertDialogCustom))
+            .setTitle("Ordered Number List")
+            .setMessage(sorted_list.joinToString (separator = " , ",prefix="",postfix = ""))
+            .setIcon(R.drawable.ic_sorted)
+            .setPositiveButton("OK"){ dialog,_ -> dialog.dismiss()}
+            .setNegativeButton("MIN->max") { _,_ -> }
+            .setNeutralButton("MAX->min"){ _,_-> }
+            .create()
+        ordered.setOnShowListener { dialog ->
+            val btnNeg = (dialog as AlertDialog).getButton(AlertDialog.BUTTON_NEGATIVE)
+            btnNeg.setOnClickListener {
+                dialog.setMessage(sorted_list.joinToString (separator = " , ",prefix="",postfix = ""))
+            }
+            val btnNeutral = dialog.getButton(AlertDialog.BUTTON_NEUTRAL)
+            btnNeutral.setOnClickListener {
+                dialog.setMessage(sorted_list.sortedDescending()
+                    .joinToString(separator=" , ",prefix = "",postfix = ""))
+            }
+        }
+        ordered.setCanceledOnTouchOutside(false)
+        ordered.show()
+    }
+
+    private fun showOriginalListDialog() {
+        val original = AlertDialog.Builder(activity!!)
+            .setTitle("Original Number List")
+            .setMessage(num_list.joinToString (separator = " , ",prefix="",postfix = ""))
+            .setIcon(R.drawable.ic_original)
+            .setPositiveButton("OK"){ dialog,_ -> dialog.dismiss()}
+            .create()
+        original.setCanceledOnTouchOutside(false)
+        original.show()
     }
 
     private fun calculate(i: Int): Double = when (i) {

@@ -8,4 +8,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:headerDividersEnabled">true</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:background">#000000</item>
+        <item name="android:textDirection">ltr</item>
+        <item name="android:layoutDirection">ltr</item>
+        <item name="android:buttonBarStyle">@style/ButtonBarCustom</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/ButtonCustom001</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/ButtonCustom001</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/ButtonCustom002</item>
+    </style>
+
+    <style name="ButtonBarCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#000000</item>
+    </style>
+
+    <style name="ButtonCustom001" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#00ff00</item>
+    </style>
+
+
+    <style name="ButtonCustom002" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#0000ff</item>
+    </style>
+
+
 </resources>
